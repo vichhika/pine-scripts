@@ -31,7 +31,7 @@ for i = 1 to maxBarsBack
             line.delete(bullEngulfOpen[i])
             line.delete(bullEngulfLow[i])
             continue
-        if close < line.get_y1(bullEngulfOpen[i])
+        if low < line.get_y1(bullEngulfOpen[i])
             //line.set_x2(bullEngulfOpen[i], bar_index)
             line.set_color(bullEngulfOpen[i], color.gray)
             //line.set_extend(bullEngulfOpen[i], extend.none)
@@ -52,7 +52,7 @@ for i = 1 to maxBarsBack
             line.delete(bearEngulfHigh[i])
             continue
         
-        if close > line.get_y1(bearEngulfOpen[i])
+        if high > line.get_y1(bearEngulfOpen[i])
             //line.set_x2(bearEngulfOpen[i], bar_index)
             line.set_color(bearEngulfOpen[i], color.gray)
             //line.set_extend(bearEngulfOpen[i], extend.none)
